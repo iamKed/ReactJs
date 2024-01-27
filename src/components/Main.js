@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { Form, Button, Card, CardBody } from "react-bootstrap";
 import { addDoc, collection, getDocs } from 'firebase/firestore/lite';
 import db from "../firebase";
-
+import Profile from "./Profile";
 function Main() {
   const [users, setUsers] = useState([]);
   const userRef = useRef();
@@ -34,9 +34,10 @@ function Main() {
       console.log(e);
     }
   };
-
+  
   return (
     <Container>
+      <button className="btn btn-outline-dark">Go to Profile</button>
       <Form style={{
         width: '50%',
         margin:'auto',
