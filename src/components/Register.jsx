@@ -1,25 +1,34 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import { useFirebase } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import { Alert } from "react-bootstrap";
 const Register = () => {
-  const firebase=useFirebase();
+  const firebase = useFirebase();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+  var message = {
+    response: "",
+    variant: "",
+  };
   useEffect(() => {
     if (firebase.isLoggedIn) {
       // navigate to home
       navigate("/");
     }
   }, [firebase, navigate]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    firebase.register(email,password);
+    message.response = await firebase.register(email, password);
+    console.log("Register Message", message.response);
+    alert("Registered SUccesfully! Click 'OK' to go to Homepage.");
+    navigate("/");
   };
+
   return (
     <div className="container mt-5">
       <Link to="/">
@@ -31,6 +40,7 @@ const Register = () => {
         </button>
       </Link>
       <p className="h1 ">Registration Page</p>
+      <>{message.response}</>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

@@ -2,46 +2,62 @@ import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { Form, Card, Nav } from "react-bootstrap";
 import { useFirebase } from "../firebase";
-import { addDoc } from "firebase/firestore/lite";
-import axios from "axios";
+// import {
+//   FieldValue,
+//   addDoc,
+//   getDocs,
+// } from "firebase/firestore/lite";
+import {
+  getDocs,
+  addDoc,
+  serverTimestamp,
+  collection,
+} from "firebase/firestore";
 function Main() {
   const [text, setText] = useState("");
+
   const [todos, setTodos] = useState([]);
   const firebase = useFirebase();
-  console.log("Firebase Context out", firebase);
   const [userEmail, setUserEmail] = useState("");
+
   useEffect(() => {
-    console.log("Firebase Context", firebase);
     const showUser = () => {
-      if (firebase.isLoggedIn) {setUserEmail(firebase.user.email);}
+      if (firebase.isLoggedIn) {
+        console.log("Logging in");
+        setUserEmail(firebase.user.email);
+        getData();
+      }
     };
     showUser();
   }, [firebase]);
+
+  // Get all TODO's
+  const getData = async () => {
+    const data = await getDocs(firebase.user.uid);
+    setTodos(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  };
+  // Logout Function
   const logout = async () => {
     await firebase.logout();
+    setTodos([]);
   };
-  const apiFetch = async () => {
-    await axios
-      .get("https://jsonplaceholder.typicode.com/todos")
-      .then((json) => {
-        setTodos(json.data);
-      });
-  };
+  // Add a Todo
   const updateData = async (e) => {
     try {
       e.preventDefault();
       let data = {
         text: text,
+        timeStamp: new Date().getUTCMilliseconds(),
       };
       console.log("Data is ", data);
-      await addDoc(firebase.userCollectionRef, data);
+      await addDoc(collection(firebase.db, firebase.user.uid), data);
       console.log("Done");
-      // showUsers();
+      getData();
     } catch (e) {
       console.log(e);
     }
   };
-
+  // React UI Component Return
   return (
     <Container>
       <Nav activeKey="/home" style={{ backgroundColor: "#46A2EC" }}>
@@ -50,7 +66,17 @@ function Main() {
             <span className="display-6"> Todo Application</span>
           </Nav.Link>
         </Nav.Item>
-        {!firebase.isLoggedIn && (
+
+        {firebase.isLoggedIn ? (
+          <>
+            <Nav.Item>
+              <Nav.Link>{userEmail}</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link onClick={logout}>Logout</Nav.Link>
+            </Nav.Item>
+          </>
+        ) : (
           <>
             <Nav.Item>
               <Nav.Link href="/login">Login</Nav.Link>
@@ -60,17 +86,6 @@ function Main() {
             </Nav.Item>
           </>
         )}
-        {firebase.isLoggedIn && (
-          <>
-            <Nav.Item>
-              <Nav.Link>{userEmail}</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link onClick={logout}>Logout</Nav.Link>
-            </Nav.Item>
-          </>
-        )}
-        {logout}
       </Nav>
       <Form
         style={{
@@ -99,15 +114,6 @@ function Main() {
             }}
           />
         </Form.Group>
-        {/* <Form.Group controlId="form.Name">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" ref={userRef1} placeholder="email" />
-        </Form.Group>
-        <Form.Group controlId="form.Name">
-          <Form.Label>Address</Form.Label>
-          <Form.Control type="text" ref={userRef2} placeholder="Address" />
-        </Form.Group> */}
-
         <button
           style={{
             marginTop: 20,
@@ -133,17 +139,18 @@ function Main() {
       <hr style={{ margin: 50 }}></hr>
       {() => {
         if (firebase.isLoggedIn) {
-          apiFetch();
+          console.log("In the function", setTodos(firebase.apiFetch()));
         }
       }}
       <p className="display-5 ">Your todo's</p>
+
       {todos.map((todo) => {
         return (
-          <Card key={todo.id} style={{ margin: 8 }}>
+          <Card key={todo.id} style={{ margin: 20 }}>
             <Card.Header>Featured</Card.Header>
             <Card.Body>
-              <Card.Title>{todo.id}</Card.Title>
-              <Card.Text>{todo.title}</Card.Text>
+              <Card.Title>{todo.Name}</Card.Title>
+              <Card.Text>{todo.text}</Card.Text>
 
               {/* <Button >Go somewhere</Button> */}
             </Card.Body>
