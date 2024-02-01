@@ -1,11 +1,11 @@
 import { React } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Main from "./components/Main";
-import Login from "./components/Login";
+import Main from "./pages/Main";
+import Login from "./pages/Login";
 import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Register from "./components/Register";
+import Register from "./pages/Register";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { FirebaseProvider } from "./firebase";
 const root = ReactDOM.createRoot(document.getElementById("root"));

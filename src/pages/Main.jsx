@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Alert, Container } from "react-bootstrap";
 import { Form, Card, Nav } from "react-bootstrap";
 import { useFirebase } from "../firebase";
 // import {
@@ -7,33 +7,27 @@ import { useFirebase } from "../firebase";
 //   addDoc,
 //   getDocs,
 // } from "firebase/firestore/lite";
-import {
-  getDocs,
-  addDoc,
-  serverTimestamp,
-  collection,
-} from "firebase/firestore";
+import { getDocs, addDoc, collection } from "firebase/firestore";
 function Main() {
   const [text, setText] = useState("");
-
   const [todos, setTodos] = useState([]);
   const firebase = useFirebase();
   const [userEmail, setUserEmail] = useState("");
 
   useEffect(() => {
-    const showUser = () => {
+    const showUser = async () => {
       if (firebase.isLoggedIn) {
-        console.log("Logging in");
         setUserEmail(firebase.user.email);
         getData();
       }
+      firebase.setMsg("Please Login to use the Application");
     };
     showUser();
-  }, [firebase]);
+  }, [firebase, setUserEmail]);
 
   // Get all TODO's
   const getData = async () => {
-    const data = await getDocs(firebase.user.uid);
+    const data = await getDocs(collection(firebase.db, firebase.user.uid));
     setTodos(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
   // Logout Function
@@ -47,9 +41,8 @@ function Main() {
       e.preventDefault();
       let data = {
         text: text,
-        timeStamp: new Date().getUTCMilliseconds(),
+        createdAt: firebase.user.metadata.creationTime,
       };
-      console.log("Data is ", data);
       await addDoc(collection(firebase.db, firebase.user.uid), data);
       console.log("Done");
       getData();
@@ -60,10 +53,13 @@ function Main() {
   // React UI Component Return
   return (
     <Container>
-      <Nav activeKey="/home" style={{ backgroundColor: "#46A2EC" }}>
+      <Nav activeKey="/home" style={{ backgroundColor: "#5EBEC4" }}>
         <Nav.Item>
           <Nav.Link href="/">
-            <span className="display-6"> Todo Application</span>
+            <span className="display-6" style={{ backgroungColor: "#F92C85" }}>
+              {" "}
+              Todo Application
+            </span>
           </Nav.Link>
         </Nav.Item>
 
@@ -98,32 +94,39 @@ function Main() {
           width: "50%",
         }}
       >
-        <h2 style={{ color: "#4F62FF" }}>Todo Application</h2>
-        <hr style={{ marginBottom: 30 }}></hr>
-        <Form.Group controlId="form.Name">
-          <Form.Label>Insert todo</Form.Label>
-          <Form.Control
-            type="text"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            placeholder="Add a todo"
-            style={{
-              background: "transparent",
-              borderColor: "black",
-              borderRadius: 20,
-            }}
-          />
-        </Form.Group>
-        <button
-          style={{
-            marginTop: 20,
-          }}
-          type="button"
-          className="btn btn-outline-success"
-          onClick={updateData}
-        >
-          Add Todo
-        </button>
+        {firebase.isLoggedIn ? (
+          <>
+            <h2 style={{ color: "#F92C85" }}>Todo Application</h2>
+            <hr style={{ marginBottom: 30 }}></hr>
+            <Form.Group controlId="form.Name">
+              <Form.Label>Insert todo</Form.Label>
+              <Form.Control
+                type="text"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                placeholder="Add a todo"
+                style={{
+                  background: "transparent",
+                  borderColor: "black",
+                  borderRadius: 20,
+                }}
+              />
+            </Form.Group>
+            <button
+              style={{
+                marginTop: 20,
+              }}
+              type="button"
+              className="btn btn-outline-success"
+              onClick={updateData}
+            >
+              Add Todo
+            </button>
+          </>
+        ) : (
+          <Alert variant={"dark"}>{firebase.msg}</Alert>
+          // firebase.setMsg("")
+        )}
         {/* <button
           style={{
             marginLeft: 20,
@@ -137,11 +140,7 @@ function Main() {
         </button> */}
       </Form>
       <hr style={{ margin: 50 }}></hr>
-      {() => {
-        if (firebase.isLoggedIn) {
-          console.log("In the function", setTodos(firebase.apiFetch()));
-        }
-      }}
+
       <p className="display-5 ">Your todo's</p>
 
       {todos.map((todo) => {

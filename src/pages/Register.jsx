@@ -10,27 +10,23 @@ const Register = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  var message = {
-    response: "",
-    variant: "",
-  };
   useEffect(() => {
     if (firebase.isLoggedIn) {
       // navigate to home
       navigate("/");
     }
+    firebase.setMsg("Please Register here!");
   }, [firebase, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    message.response = await firebase.register(email, password);
-    console.log("Register Message", message.response);
-    alert("Registered SUccesfully! Click 'OK' to go to Homepage.");
-    navigate("/");
+    await firebase.register(email, password);
+    // navigate("/register")
   };
 
   return (
     <div className="container mt-5">
+      <Alert variant={"dark"}>{firebase.msg}</Alert>
       <Link to="/">
         <button
           className="btn "
@@ -40,7 +36,6 @@ const Register = () => {
         </button>
       </Link>
       <p className="h1 ">Registration Page</p>
-      <>{message.response}</>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
