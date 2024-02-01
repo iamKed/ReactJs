@@ -1,0 +1,1431 @@
+[debug] [2024-02-01T09:28:47.256Z] ----------------------------------------------------------------------
+[debug] [2024-02-01T09:28:47.275Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\asus\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2024-02-01T09:28:47.276Z] CLI Version:   13.1.0
+[debug] [2024-02-01T09:28:47.276Z] Platform:      win32
+[debug] [2024-02-01T09:28:47.277Z] Node Version:  v20.11.0
+[debug] [2024-02-01T09:28:47.277Z] Time:          Thu Feb 01 2024 14:58:47 GMT+0530 (India Standard Time)
+[debug] [2024-02-01T09:28:47.277Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-01T09:28:47.779Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-01T09:28:47.781Z] > authorizing via signed-in user (veerkrushnadalvi@orchidengg.ac.in)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-02-01T09:28:47.851Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-01T09:28:47.853Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-02-01T09:28:47.908Z] [hub] writing locator at C:\Users\asus\AppData\Local\Temp\hub-kedtodoapplication.json
+[debug] [2024-02-01T09:28:48.017Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-01T09:28:48.019Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-01T09:28:48.019Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2024-02-01T09:28:48.032Z] defaultcredentials: writing to file C:\Users\asus\AppData\Roaming\firebase\veerkrushnadalvi_orchidengg_ac.in_application_default_credentials.json
+[debug] [2024-02-01T09:28:48.041Z] Setting GAC to C:\Users\asus\AppData\Roaming\firebase\veerkrushnadalvi_orchidengg_ac.in_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\asus\\AppData\\Roaming\\firebase\\veerkrushnadalvi_orchidengg_ac.in_application_default_credentials.json"}}
+[debug] [2024-02-01T09:28:48.046Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/kedtodoapplication/adminSdkConfig [none]
+[debug] [2024-02-01T09:28:48.592Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/kedtodoapplication/adminSdkConfig 200
+[debug] [2024-02-01T09:28:48.592Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/kedtodoapplication/adminSdkConfig {"projectId":"kedtodoapplication","databaseURL":"https://kedtodoapplication-default-rtdb.firebaseio.com","storageBucket":"kedtodoapplication.appspot.com"}
+[info] i  ui: downloading ui-v1.11.7.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.7.zip..."}}
+[debug] [2024-02-01T09:28:48.659Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.7.zip 
+[debug] [2024-02-01T09:28:51.473Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.7.zip 200
+[debug] [2024-02-01T09:28:51.473Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.7.zip [stream]
+[debug] [2024-02-01T09:29:04.011Z] Data is 3064105
+[debug] [2024-02-01T09:29:04.012Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-02-01T09:29:04.012Z] [unzip] Processing entry: client\
+[debug] [2024-02-01T09:29:04.013Z] [unzip] mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\
+[debug] [2024-02-01T09:29:04.016Z] [unzip] Entry: client/favicon.ico (compressed_size=2497 bytes, uncompressed_size=7406 bytes)
+[debug] [2024-02-01T09:29:04.017Z] [unzip] Processing entry: client\favicon.ico
+[debug] [2024-02-01T09:29:04.017Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.018Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\favicon.ico
+[debug] [2024-02-01T09:29:04.028Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=7231 bytes, uncompressed_size=7367 bytes)
+[debug] [2024-02-01T09:29:04.029Z] [unzip] Processing entry: client\apple-touch-icon.png
+[debug] [2024-02-01T09:29:04.029Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.031Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\apple-touch-icon.png
+[debug] [2024-02-01T09:29:04.041Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=16987 bytes, uncompressed_size=18186 bytes)
+[debug] [2024-02-01T09:29:04.041Z] [unzip] Processing entry: client\android-chrome-512x512.png
+[debug] [2024-02-01T09:29:04.042Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.042Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\android-chrome-512x512.png
+[debug] [2024-02-01T09:29:04.053Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-02-01T09:29:04.053Z] [unzip] Processing entry: client\assets\
+[debug] [2024-02-01T09:29:04.053Z] [unzip] mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\
+[debug] [2024-02-01T09:29:04.054Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-02-01T09:29:04.054Z] [unzip] Processing entry: client\assets\extensions\
+[debug] [2024-02-01T09:29:04.054Z] [unzip] mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\extensions\
+[debug] [2024-02-01T09:29:04.055Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2024-02-01T09:29:04.055Z] [unzip] Processing entry: client\assets\extensions\default-extension.png
+[debug] [2024-02-01T09:29:04.055Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\extensions
+[debug] [2024-02-01T09:29:04.056Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\extensions\default-extension.png
+[debug] [2024-02-01T09:29:04.059Z] [unzip] Entry: client/assets/index.58ca09f7.css (compressed_size=37601 bytes, uncompressed_size=321252 bytes)
+[debug] [2024-02-01T09:29:04.059Z] [unzip] Processing entry: client\assets\index.58ca09f7.css
+[debug] [2024-02-01T09:29:04.059Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets
+[debug] [2024-02-01T09:29:04.060Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\index.58ca09f7.css
+[debug] [2024-02-01T09:29:04.065Z] [unzip] Entry: client/assets/index.c2583d42.js (compressed_size=526232 bytes, uncompressed_size=1860152 bytes)
+[debug] [2024-02-01T09:29:04.066Z] [unzip] Processing entry: client\assets\index.c2583d42.js
+[debug] [2024-02-01T09:29:04.066Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets
+[debug] [2024-02-01T09:29:04.067Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\index.c2583d42.js
+[debug] [2024-02-01T09:29:04.094Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-02-01T09:29:04.094Z] [unzip] Processing entry: client\assets\provider-icons\
+[debug] [2024-02-01T09:29:04.094Z] [unzip] mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\
+[debug] [2024-02-01T09:29:04.096Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2024-02-01T09:29:04.096Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_oidc.svg
+[debug] [2024-02-01T09:29:04.096Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.097Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_oidc.svg
+[debug] [2024-02-01T09:29:04.101Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2024-02-01T09:29:04.101Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_yahoo.svg
+[debug] [2024-02-01T09:29:04.101Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.102Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_yahoo.svg
+[debug] [2024-02-01T09:29:04.110Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2024-02-01T09:29:04.111Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_phone.svg
+[debug] [2024-02-01T09:29:04.111Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.112Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_phone.svg
+[debug] [2024-02-01T09:29:04.116Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2024-02-01T09:29:04.116Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_saml.svg
+[debug] [2024-02-01T09:29:04.116Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.117Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_saml.svg
+[debug] [2024-02-01T09:29:04.120Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2024-02-01T09:29:04.120Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_mslive.svg
+[debug] [2024-02-01T09:29:04.121Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.122Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_mslive.svg
+[debug] [2024-02-01T09:29:04.125Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2024-02-01T09:29:04.126Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_facebook.svg
+[debug] [2024-02-01T09:29:04.126Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.129Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_facebook.svg
+[debug] [2024-02-01T09:29:04.138Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2024-02-01T09:29:04.139Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_play_games.svg
+[debug] [2024-02-01T09:29:04.139Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.144Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_play_games.svg
+[debug] [2024-02-01T09:29:04.153Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2024-02-01T09:29:04.153Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_github.svg
+[debug] [2024-02-01T09:29:04.153Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.155Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_github.svg
+[debug] [2024-02-01T09:29:04.197Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2024-02-01T09:29:04.198Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_apple.svg
+[debug] [2024-02-01T09:29:04.198Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.200Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_apple.svg
+[debug] [2024-02-01T09:29:04.211Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2024-02-01T09:29:04.211Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_google.svg
+[debug] [2024-02-01T09:29:04.211Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.212Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_google.svg
+[debug] [2024-02-01T09:29:04.215Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2024-02-01T09:29:04.215Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_email.svg
+[debug] [2024-02-01T09:29:04.216Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.216Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_email.svg
+[debug] [2024-02-01T09:29:04.220Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2024-02-01T09:29:04.220Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_twitter.svg
+[debug] [2024-02-01T09:29:04.220Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.221Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_twitter.svg
+[debug] [2024-02-01T09:29:04.232Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2024-02-01T09:29:04.232Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_game_center.svg
+[debug] [2024-02-01T09:29:04.232Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2024-02-01T09:29:04.233Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_game_center.svg
+[debug] [2024-02-01T09:29:04.243Z] [unzip] Entry: client/assets/index.c2583d42.js.map (compressed_size=1778557 bytes, uncompressed_size=7961927 bytes)
+[debug] [2024-02-01T09:29:04.243Z] [unzip] Processing entry: client\assets\index.c2583d42.js.map
+[debug] [2024-02-01T09:29:04.243Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets
+[debug] [2024-02-01T09:29:04.244Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\index.c2583d42.js.map
+[debug] [2024-02-01T09:29:04.337Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-02-01T09:29:04.338Z] [unzip] Processing entry: client\assets\img\
+[debug] [2024-02-01T09:29:04.338Z] [unzip] mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\img\
+[debug] [2024-02-01T09:29:04.339Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2024-02-01T09:29:04.339Z] [unzip] Processing entry: client\assets\img\database.png
+[debug] [2024-02-01T09:29:04.339Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\img
+[debug] [2024-02-01T09:29:04.340Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\assets\img\database.png
+[debug] [2024-02-01T09:29:04.343Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=838 bytes, uncompressed_size=1504 bytes)
+[debug] [2024-02-01T09:29:04.344Z] [unzip] Processing entry: client\safari-pinned-tab.svg
+[debug] [2024-02-01T09:29:04.344Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.344Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\safari-pinned-tab.svg
+[debug] [2024-02-01T09:29:04.348Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=5406 bytes, uncompressed_size=5723 bytes)
+[debug] [2024-02-01T09:29:04.349Z] [unzip] Processing entry: client\mstile-150x150.png
+[debug] [2024-02-01T09:29:04.349Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.350Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\mstile-150x150.png
+[debug] [2024-02-01T09:29:04.353Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2024-02-01T09:29:04.354Z] [unzip] Processing entry: client\browserconfig.xml
+[debug] [2024-02-01T09:29:04.354Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.361Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\browserconfig.xml
+[debug] [2024-02-01T09:29:04.364Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2024-02-01T09:29:04.364Z] [unzip] Processing entry: client\robots.txt
+[debug] [2024-02-01T09:29:04.365Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.365Z] [unzip] Writing file: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\robots.txt
+[debug] [2024-02-01T09:29:04.368Z] [unzip] Entry: client/index.html (compressed_size=1363 bytes, uncompressed_size=3064 bytes)
+[debug] [2024-02-01T09:29:04.368Z] [unzip] Processing entry: client\index.html
+[debug] [2024-02-01T09:29:04.368Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.369Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\index.html
+[debug] [2024-02-01T09:29:04.380Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=757 bytes, uncompressed_size=777 bytes)
+[debug] [2024-02-01T09:29:04.381Z] [unzip] Processing entry: client\favicon-16x16.png
+[debug] [2024-02-01T09:29:04.381Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.382Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\favicon-16x16.png
+[debug] [2024-02-01T09:29:04.386Z] [unzip] Entry: client/manifest.json (compressed_size=246 bytes, uncompressed_size=551 bytes)
+[debug] [2024-02-01T09:29:04.386Z] [unzip] Processing entry: client\manifest.json
+[debug] [2024-02-01T09:29:04.386Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.388Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\manifest.json
+[debug] [2024-02-01T09:29:04.398Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=1175 bytes, uncompressed_size=1175 bytes)
+[debug] [2024-02-01T09:29:04.398Z] [unzip] Processing entry: client\favicon-32x32.png
+[debug] [2024-02-01T09:29:04.398Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.399Z] [unzip] Writing file: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\favicon-32x32.png
+[debug] [2024-02-01T09:29:04.402Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=7602 bytes, uncompressed_size=7834 bytes)
+[debug] [2024-02-01T09:29:04.403Z] [unzip] Processing entry: client\android-chrome-192x192.png
+[debug] [2024-02-01T09:29:04.403Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2024-02-01T09:29:04.404Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\client\android-chrome-192x192.png
+[debug] [2024-02-01T09:29:04.408Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-02-01T09:29:04.408Z] [unzip] Processing entry: server\
+[debug] [2024-02-01T09:29:04.408Z] [unzip] mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\server\
+[debug] [2024-02-01T09:29:04.409Z] [unzip] Entry: server/server.js (compressed_size=343746 bytes, uncompressed_size=1346374 bytes)
+[debug] [2024-02-01T09:29:04.409Z] [unzip] Processing entry: server\server.js
+[debug] [2024-02-01T09:29:04.409Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\server
+[debug] [2024-02-01T09:29:04.410Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\server\server.js
+[debug] [2024-02-01T09:29:04.435Z] [unzip] Entry: server/server.js.map (compressed_size=289157 bytes, uncompressed_size=1325651 bytes)
+[debug] [2024-02-01T09:29:04.435Z] [unzip] Processing entry: server\server.js.map
+[debug] [2024-02-01T09:29:04.435Z] [unzip] else mkdir: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\server
+[debug] [2024-02-01T09:29:04.436Z] [unzip] deflating: C:\Users\asus\.cache\firebase\emulators\ui-v1.11.7\server\server.js.map
+[debug] [2024-02-01T09:29:04.454Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-02-01T09:29:04.454Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-02-01T09:29:04.455Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\asus\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\asus\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-02-01T09:29:05.174Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-02-01T09:29:05.175Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\" for Cloud Functions..."}}
+[debug] [2024-02-01T09:29:05.321Z] Validating nodejs source
+[debug] [2024-02-01T09:29:12.579Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:29:12.580Z] Building nodejs source
+[debug] [2024-02-01T09:29:12.581Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:29:12.584Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:29:12.602Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8590
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:29:13.564Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-02-01T09:30:55.957Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:30:56.973Z] Validating nodejs source
+[debug] [2024-02-01T09:31:03.451Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:31:03.451Z] Building nodejs source
+[debug] [2024-02-01T09:31:03.452Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:31:03.455Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:31:03.475Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[debug] [2024-02-01T09:31:03.524Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:31:04.529Z] Validating nodejs source
+[debug] [2024-02-01T09:31:10.321Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:31:10.321Z] Building nodejs source
+[debug] [2024-02-01T09:31:10.321Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:31:10.326Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:31:10.341Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8841
+
+[debug] [2024-02-01T09:31:10.384Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:31:10.442Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[info] Serving at port 8795
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:31:11.327Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:31:11.390Z] Validating nodejs source
+[debug] [2024-02-01T09:31:16.551Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:31:16.551Z] Building nodejs source
+[debug] [2024-02-01T09:31:16.552Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:31:16.557Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:31:16.576Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:31:16.630Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:31:17.170Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[info] Serving at port 8627
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:31:17.701Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:31:18.172Z] Validating nodejs source
+[debug] [2024-02-01T09:31:23.502Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:31:23.502Z] Building nodejs source
+[debug] [2024-02-01T09:31:23.503Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:31:23.506Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:31:23.517Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:31:23.583Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:31:24.588Z] Validating nodejs source
+[debug] [2024-02-01T09:31:29.807Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:31:29.807Z] Building nodejs source
+[debug] [2024-02-01T09:31:29.807Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:31:29.813Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:31:29.826Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8940
+
+[debug] [2024-02-01T09:31:29.867Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:31:29.912Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[info] Serving at port 8165
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:31:30.826Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:31:30.871Z] Validating nodejs source
+[debug] [2024-02-01T09:31:37.153Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:31:37.153Z] Building nodejs source
+[debug] [2024-02-01T09:31:37.153Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:31:37.158Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:31:37.178Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:31:37.224Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[info] Serving at port 8915
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:31:38.164Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:31:38.231Z] Validating nodejs source
+[debug] [2024-02-01T09:31:43.735Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:31:43.736Z] Building nodejs source
+[debug] [2024-02-01T09:31:43.736Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:31:43.739Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:31:43.762Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:31:45.815Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:31:46.281Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[info] Serving at port 8408
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:31:46.819Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:31:47.290Z] Validating nodejs source
+[debug] [2024-02-01T09:31:52.892Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:31:52.894Z] Building nodejs source
+[debug] [2024-02-01T09:31:52.894Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:31:52.899Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:31:52.926Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:31:52.999Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:31:54.010Z] Validating nodejs source
+[debug] [2024-02-01T09:32:00.621Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:32:00.622Z] Building nodejs source
+[debug] [2024-02-01T09:32:00.622Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:32:00.637Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:32:00.669Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8143
+
+[debug] [2024-02-01T09:32:00.791Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:32:00.815Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:32:01.801Z] Validating nodejs source
+[debug] [2024-02-01T09:32:09.142Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:32:09.143Z] Building nodejs source
+[debug] [2024-02-01T09:32:09.143Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:32:09.156Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:32:09.170Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8731
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:32:09.263Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:32:09.282Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:32:10.276Z] Validating nodejs source
+[debug] [2024-02-01T09:32:16.174Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:32:16.175Z] Building nodejs source
+[debug] [2024-02-01T09:32:16.175Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:32:16.184Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:32:16.205Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8983
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:32:16.260Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:32:16.320Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[info] Serving at port 8366
+
+[debug] [2024-02-01T09:32:17.270Z] Validating nodejs source
+[debug] [2024-02-01T09:32:27.346Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync C:\WINDOWS\system32\cmd.exe ETIMEDOUT
+    at Object.spawnSync (node:internal/child_process:1124:20)
+    at Object.spawnSync (node:child_process:876:24)
+    at Function.spawnSync [as sync] (C:\Users\asus\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\index.js:26:23)
+    at Object.getLatestSDKVersion (C:\Users\asus\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (C:\Users\asus\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:74:32)
+    at Delegate.validate (C:\Users\asus\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\index.js:84:20)
+    at FunctionsEmulator.discoverTriggers (C:\Users\asus\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:296:35)
+    at async FunctionsEmulator.loadTriggers (C:\Users\asus\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:325:34)
+[debug] [2024-02-01T09:32:27.354Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:32:27.355Z] Building nodejs source
+[debug] [2024-02-01T09:32:27.355Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:32:27.365Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:32:27.393Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:32:27.465Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:32:28.469Z] Validating nodejs source
+[debug] [2024-02-01T09:32:34.165Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:32:34.166Z] Building nodejs source
+[debug] [2024-02-01T09:32:34.166Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:32:34.176Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:32:34.213Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8060
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification"}}
+[debug] [2024-02-01T09:32:34.319Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:32:34.427Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:32:34.917Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[info] Serving at port 8018
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:32:35.880Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:32:35.932Z] Validating nodejs source
+[debug] [2024-02-01T09:32:41.328Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:32:41.329Z] Building nodejs source
+[debug] [2024-02-01T09:32:41.329Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:32:41.334Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:32:41.354Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:32:41.410Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[info] Serving at port 8923
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:32:42.267Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:32:42.420Z] Validating nodejs source
+[debug] [2024-02-01T09:32:47.312Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:32:47.313Z] Building nodejs source
+[debug] [2024-02-01T09:32:47.313Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:32:47.316Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:32:47.332Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:32:47.378Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:32:48.091Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[info] Serving at port 8210
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:32:48.245Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:32:49.105Z] Validating nodejs source
+[debug] [2024-02-01T09:32:54.312Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:32:54.313Z] Building nodejs source
+[debug] [2024-02-01T09:32:54.313Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:32:54.319Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:32:54.332Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:32:54.378Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:32:55.037Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[info] Serving at port 8553
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:32:55.601Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:32:56.042Z] Validating nodejs source
+[debug] [2024-02-01T09:33:02.616Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:33:02.617Z] Building nodejs source
+[debug] [2024-02-01T09:33:02.617Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:33:02.623Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:33:02.648Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:33:02.701Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:33:03.706Z] Validating nodejs source
+[debug] [2024-02-01T09:33:08.889Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:33:08.890Z] Building nodejs source
+[debug] [2024-02-01T09:33:08.890Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:33:08.898Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:33:08.915Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8543
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:33:08.993Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[info] Serving at port 8714
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:33:10.106Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:33:25.629Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:33:26.633Z] Validating nodejs source
+[debug] [2024-02-01T09:33:33.525Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:33:33.526Z] Building nodejs source
+[debug] [2024-02-01T09:33:33.526Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:33:33.532Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:33:33.553Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8065
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:33:34.703Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:33:36.018Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:33:37.023Z] Validating nodejs source
+[debug] [2024-02-01T09:33:44.220Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:33:44.220Z] Building nodejs source
+[debug] [2024-02-01T09:33:44.221Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:33:44.227Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:33:44.244Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] Serving at port 8923
+
+[error] C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js:10
+import * as v2 from "firebase-functions/v2/https";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at loadModule (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+
+[debug] [2024-02-01T09:33:45.468Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[debug] [2024-02-01T09:33:46.868Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:33:47.883Z] Validating nodejs source
+[debug] [2024-02-01T09:33:55.570Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:33:55.571Z] Building nodejs source
+[debug] [2024-02-01T09:33:55.571Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:33:55.583Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:33:55.620Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-01T09:33:57.738Z] File C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-02-01T09:33:58.747Z] Validating nodejs source
+[debug] [2024-02-01T09:34:03.797Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-01T09:34:03.798Z] Building nodejs source
+[debug] [2024-02-01T09:34:03.798Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-01T09:34:03.803Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-01T09:34:03.816Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Ked data\VS Code\MERN\reactwithfirebase\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8176
+
+[info] Serving at port 8534
+
+[debug] [2024-02-01T09:34:04.808Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-02-01T09:34:05.468Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] +  functions[us-central1-helloWorld]: http function initialized (http://127.0.0.1:5001/kedtodoapplication/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/kedtodoapplication/us-central1/helloWorld)."}}
+[info] +  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2024-02-01T09:38:36.713Z] [work-queue] {"queuedWork":["/kedtodoapplication/us-central1/helloWorld-2024-02-01T09:38:36.711Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-02-01T09:38:36.714Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/kedtodoapplication/us-central1/helloWorld-2024-02-01T09:38:36.711Z"],"workRunningCount":1}
+[debug] [2024-02-01T09:38:36.716Z] Accepted request GET /kedtodoapplication/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2024-02-01T09:38:36.747Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-02-01T09:38:36.750Z] [functions] Got req.url=/kedtodoapplication/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/kedtodoapplication/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2024-02-01T09:38:36.850Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2024-02-01T09:38:36.855Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2024-02-01T09:38:41.870Z] [runtime-status] [24796] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"C:\\\\Users\\\\asus\\\\OneDrive\\\\Ked data\\\\VS Code\\\\MERN\\\\reactwithfirebase\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2024-02-01T09:38:41.889Z] [runtime-status] [24796] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.6.0","resolution":"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.6.0\",\"resolution\":\"C:\\\\Users\\\\asus\\\\OneDrive\\\\Ked data\\\\VS Code\\\\MERN\\\\reactwithfirebase\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2024-02-01T09:38:41.890Z] [runtime-status] [24796] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-02-01T09:38:41.897Z] [runtime-status] [24796] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.6.0","resolution":"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.6.0\",\"resolution\":\"C:\\\\Users\\\\asus\\\\OneDrive\\\\Ked data\\\\VS Code\\\\MERN\\\\reactwithfirebase\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2024-02-01T09:38:42.820Z] [runtime-status] [24796] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-02-01T09:38:42.821Z] [runtime-status] [24796] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.6.0","resolution":"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.6.0\",\"resolution\":\"C:\\\\Users\\\\asus\\\\OneDrive\\\\Ked data\\\\VS Code\\\\MERN\\\\reactwithfirebase\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2024-02-01T09:38:42.826Z] [runtime-status] [24796] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.6.0","resolution":"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.6.0\",\"resolution\":\"C:\\\\Users\\\\asus\\\\OneDrive\\\\Ked data\\\\VS Code\\\\MERN\\\\reactwithfirebase\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2024-02-01T09:38:42.833Z] [runtime-status] [24796] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"C:\\\\Users\\\\asus\\\\OneDrive\\\\Ked data\\\\VS Code\\\\MERN\\\\reactwithfirebase\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2024-02-01T09:38:42.857Z] [runtime-status] [24796] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.6.0","resolution":"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.6.0\",\"resolution\":\"C:\\\\Users\\\\asus\\\\OneDrive\\\\Ked data\\\\VS Code\\\\MERN\\\\reactwithfirebase\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2024-02-01T09:38:42.858Z] [runtime-status] [24796] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.1","resolution":"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"C:\\\\Users\\\\asus\\\\OneDrive\\\\Ked data\\\\VS Code\\\\MERN\\\\reactwithfirebase\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2024-02-01T09:38:42.933Z] [runtime-status] [24796] Functions runtime initialized. {"cwd":"C:\\Users\\asus\\OneDrive\\Ked data\\VS Code\\MERN\\reactwithfirebase\\functions","node_version":"20.11.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\asus\\\\OneDrive\\\\Ked data\\\\VS Code\\\\MERN\\\\reactwithfirebase\\\\functions\",\"node_version\":\"20.11.0\"}"}}
+[debug] [2024-02-01T09:38:42.934Z] [runtime-status] [24796] Listening to port: \\?\pipe\fire_emu_61a2fb7cfdd061f8 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [24796] Listening to port: \\\\?\\pipe\\fire_emu_61a2fb7cfdd061f8"}}
+[debug] [2024-02-01T09:38:43.004Z] [worker-us-central1-helloWorld-b46bef6a-8d66-4b25-aa5f-507c1e4c6874]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-b46bef6a-8d66-4b25-aa5f-507c1e4c6874]: IDLE"}}
+[debug] [2024-02-01T09:38:43.005Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
+[info] i  functions: Beginning execution of "us-central1-helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"us-central1-helloWorld\""}}
+[debug] [2024-02-01T09:38:43.011Z] [worker-us-central1-helloWorld-b46bef6a-8d66-4b25-aa5f-507c1e4c6874]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-b46bef6a-8d66-4b25-aa5f-507c1e4c6874]: BUSY"}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2024-02-01T09:38:43.035Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-helloWorld" in 25.1355ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"us-central1-helloWorld\" in 25.1355ms"}}
+[debug] [2024-02-01T09:38:43.038Z] [worker-us-central1-helloWorld-b46bef6a-8d66-4b25-aa5f-507c1e4c6874]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-b46bef6a-8d66-4b25-aa5f-507c1e4c6874]: IDLE"}}
+[debug] [2024-02-01T09:38:43.039Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-02-01T09:38:43.040Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-02-01T09:38:43.040Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-02-01T09:38:43.410Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2024-02-01T09:39:06.757Z] Functions emulator received unknown request at path /kedtodoapplication/

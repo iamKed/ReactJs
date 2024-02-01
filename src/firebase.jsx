@@ -2,6 +2,9 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import firebaseConfig from "./firebase-config";
+import fb from "firebase/app";
+import { connectFirestoreEmulator } from "firebase/firestore";
+import { connectAuthEmulator } from "firebase/auth";
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -19,6 +22,10 @@ export const useFirebase = () => useContext(FirebaseContext);
 const app = initializeApp(firebaseConfig);
 const firebaseAuth = getAuth(app);
 const db = getFirestore(app);
+connectAuthEmulator(firebaseAuth,"http://localhost:9099", 9099);
+connectFirestoreEmulator(db, "localhost", 8080);
+// db.useEmulator("localhost", 8080);
+// firebaseAuth.useEmulator("http://localhost:9099/", { disableWarnings: true });
 const googleProvider = new GoogleAuthProvider();
 export const FirebaseProvider = (props) => {
   const [msg, setMsg] = useState("Please Login to use the Application");

@@ -83,65 +83,56 @@ function Main() {
           </>
         )}
       </Nav>
-      <Form
-        style={{
-          margin: "auto",
-          marginTop: 50,
-          justifyContent: "center",
-          border: "2px solid black",
-          padding: 30,
-          borderRadius: 20,
-          width: "50%",
-        }}
-      >
+      <Form>
         {firebase.isLoggedIn ? (
           <>
-            <h2 style={{ color: "#F92C85" }}>Todo Application</h2>
-            <hr style={{ marginBottom: 30 }}></hr>
-            <Form.Group controlId="form.Name">
-              <Form.Label>Insert todo</Form.Label>
-              <Form.Control
-                type="text"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                placeholder="Add a todo"
-                style={{
-                  background: "transparent",
-                  borderColor: "black",
-                  borderRadius: 20,
-                }}
-              />
-            </Form.Group>
-            <button
+            <div
               style={{
-                marginTop: 20,
+                margin: "auto",
+                marginTop: 50,
+                justifyContent: "center",
+                border: "2px solid black",
+                padding: 30,
+                borderRadius: 20,
+                width: "50%",
               }}
-              type="button"
-              className="btn btn-outline-success"
-              onClick={updateData}
             >
-              Add Todo
-            </button>
+              <h2 style={{ color: "#F92C85" }}>Todo Application</h2>
+              <hr style={{ marginBottom: 30 }}></hr>
+              <Form.Group controlId="form.Name">
+                <Form.Label>Insert todo</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                  placeholder="Add a todo"
+                  style={{
+                    background: "transparent",
+                    borderColor: "black",
+                    borderRadius: 20,
+                  }}
+                />
+              </Form.Group>
+              <button
+                style={{
+                  marginTop: 20,
+                }}
+                type="button"
+                className="btn btn-outline-success"
+                onClick={updateData}
+              >
+                Add Todo
+              </button>
+            </div>
+
+            <hr style={{ margin: 50 }}></hr>
+
+            <p className="display-5 ">Your todo's</p>
           </>
         ) : (
           <Alert variant={"dark"}>{firebase.msg}</Alert>
-          // firebase.setMsg("")
         )}
-        {/* <button
-          style={{
-            marginLeft: 20,
-            marginTop: 20,
-          }}
-          type="button"
-          onClick={showUsers}
-          className="btn btn-outline-dark"
-        >
-          Show Data
-        </button> */}
       </Form>
-      <hr style={{ margin: 50 }}></hr>
-
-      <p className="display-5 ">Your todo's</p>
 
       {todos.map((todo) => {
         return (
@@ -150,8 +141,6 @@ function Main() {
             <Card.Body>
               <Card.Title>{todo.Name}</Card.Title>
               <Card.Text>{todo.text}</Card.Text>
-
-              {/* <Button >Go somewhere</Button> */}
             </Card.Body>
           </Card>
         );
