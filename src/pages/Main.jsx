@@ -2,12 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Alert, Container } from "react-bootstrap";
 import { Form, Card, Nav } from "react-bootstrap";
 import { useFirebase } from "../firebase";
-// import {
-//   FieldValue,
-//   addDoc,
-//   getDocs,
-// } from "firebase/firestore/lite";
 import { getDocs, addDoc, collection } from "firebase/firestore";
+import axios from "axios";
 function Main() {
   const [text, setText] = useState("");
   const [todos, setTodos] = useState([]);
@@ -24,7 +20,29 @@ function Main() {
     };
     showUser();
   }, [firebase, setUserEmail]);
+  // Fetch Functions API's
+  const getFunctionAPI = async () => {
+    //     const res= await fetch("http://127.0.0.1:5001/kedtodoapplication/us-central1/apiType", {
+    //       method: "POST",
+    //       // body: "Veerkrushna",
+    // body    }).data;
+    const res = await (await axios.post(
+      "http://127.0.0.1:5001/kedtodoapplication/us-central1/apiType"
+    ),
+    [
+      "Veer and Kedar",
+      
+    ]);
+    console.log(res[0]);
+    document.getElementById("new").innerHTML = res[0];
+    // fetch(
 
+    //   {
+    //     method: "GET",
+    //     body:"Veerkrushna Dalvi" // body data type must match "Content-Type" header
+    //   }
+    // );
+  };
   // Get all TODO's
   const getData = async () => {
     const data = await getDocs(collection(firebase.db, firebase.user.uid));
@@ -52,7 +70,7 @@ function Main() {
   };
   // React UI Component Return
   return (
-    <Container>
+    <div>
       <Nav activeKey="/home" style={{ backgroundColor: "#5EBEC4" }}>
         <Nav.Item>
           <Nav.Link href="/">
@@ -71,6 +89,9 @@ function Main() {
             <Nav.Item>
               <Nav.Link onClick={logout}>Logout</Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+              <Nav.Link onClick={getFunctionAPI}>API</Nav.Link>
+            </Nav.Item>
           </>
         ) : (
           <>
@@ -88,17 +109,17 @@ function Main() {
           <>
             <div
               style={{
-                margin: "auto",
+                margin: 30,
                 marginTop: 50,
                 justifyContent: "center",
                 border: "2px solid black",
                 padding: 30,
                 borderRadius: 20,
-                width: "50%",
               }}
             >
               <h2 style={{ color: "#F92C85" }}>Todo Application</h2>
               <hr style={{ marginBottom: 30 }}></hr>
+              <p id="new"></p>
               <Form.Group controlId="form.Name">
                 <Form.Label>Insert todo</Form.Label>
                 <Form.Control
@@ -127,7 +148,9 @@ function Main() {
 
             <hr style={{ margin: 50 }}></hr>
 
-            <p className="display-5 ">Your todo's</p>
+            <p className="display-5 " style={{ margin: 40 }}>
+              Your todo's
+            </p>
           </>
         ) : (
           <Alert variant={"dark"}>{firebase.msg}</Alert>
@@ -136,8 +159,8 @@ function Main() {
 
       {todos.map((todo) => {
         return (
-          <Card key={todo.id} style={{ margin: 20 }}>
-            <Card.Header>Featured</Card.Header>
+          <Card key={todo.id} style={{ margin: 30 }}>
+            <Card.Header>Task</Card.Header>
             <Card.Body>
               <Card.Title>{todo.Name}</Card.Title>
               <Card.Text>{todo.text}</Card.Text>
@@ -145,7 +168,7 @@ function Main() {
           </Card>
         );
       })}
-    </Container>
+    </div>
   );
 }
 export default Main;

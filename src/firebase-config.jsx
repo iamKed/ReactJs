@@ -1,5 +1,3 @@
-// require("dotenv").config()
-// require("dotenv-webpack").config()
 const firebaseConfig = {
 
   apiKey: process.env.REACT_APP_API_KEY,
@@ -9,5 +7,4 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_API_ID,
 };
-// console.log("API",firebaseConfig.apiKey)
 export default firebaseConfig;
