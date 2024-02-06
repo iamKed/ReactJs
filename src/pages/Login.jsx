@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { Link, useNavigate } from "react-router-dom";
 import { useFirebase } from "../firebase";
 import { Alert } from "react-bootstrap";
+import { addDoc, collection } from "firebase/firestore";
 const Login = () => {
   const firebase = useFirebase();
   const navigate = useNavigate();
@@ -13,16 +14,24 @@ const Login = () => {
     if (firebase.isLoggedIn) {
       navigate("/");
     }
-    firebase.setMsg("Please Log in");
   }, [firebase, navigate]);
-
+  const showMessage = () => {
+    document.getElementById("message").innerHTML = firebase.msg;
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     await firebase.login(email, password);
+    showMessage();
   };
   const signInWithGoogle = async (e) => {
     e.preventDefault();
     await firebase.loginWithGoogle();
+    await addDoc(collection(firebase.db, "Users", firebase.user.uid), {
+      name: firebase.user.displayName,
+      email: firebase.user.email,
+      city: "",
+      age: "",
+    });
     navigate("/");
   };
 
@@ -33,7 +42,7 @@ const Login = () => {
           <button className="btn btn-outline-dark"> Go back</button>
         </Link>
         <p className="h1 mb-5 mt-2">Login Page</p>
-        <Alert variant={"dark"}>{firebase.msg}</Alert>
+        <Alert variant={"dark"} id="message"></Alert>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>

@@ -2,51 +2,47 @@ import React, { useState, useEffect } from "react";
 import { Alert, Container } from "react-bootstrap";
 import { Form, Card, Nav } from "react-bootstrap";
 import { useFirebase } from "../firebase";
-import { getDocs, addDoc, collection } from "firebase/firestore";
+import {
+  getDocs,
+  addDoc,
+  collection,
+  where,
+  doc,
+  documentId,
+} from "firebase/firestore";
 import axios from "axios";
 function Main() {
   const [text, setText] = useState("");
   const [todos, setTodos] = useState([]);
   const firebase = useFirebase();
-  const [userEmail, setUserEmail] = useState("");
+  const [userData, setUserData] = useState({});
 
   useEffect(() => {
     const showUser = async () => {
       if (firebase.isLoggedIn) {
-        setUserEmail(firebase.user.email);
         getData();
+        console.log(firebase.user);
       }
       firebase.setMsg("Please Login to use the Application");
     };
     showUser();
-  }, [firebase, setUserEmail]);
+  }, [firebase]);
   // Fetch Functions API's
   const getFunctionAPI = async () => {
-    //     const res= await fetch("http://127.0.0.1:5001/kedtodoapplication/us-central1/apiType", {
-    //       method: "POST",
-    //       // body: "Veerkrushna",
-    // body    }).data;
-    const res = await (await axios.post(
-      "http://127.0.0.1:5001/kedtodoapplication/us-central1/apiType"
-    ),
-    [
-      "Veer and Kedar",
-      
-    ]);
+    const res =
+      (await axios.post(
+        "http://127.0.0.1:5001/kedtodoapplication/us-central1/apiType"
+      ),
+      ["Veer and Kedar"]);
     console.log(res[0]);
     document.getElementById("new").innerHTML = res[0];
-    // fetch(
-
-    //   {
-    //     method: "GET",
-    //     body:"Veerkrushna Dalvi" // body data type must match "Content-Type" header
-    //   }
-    // );
   };
   // Get all TODO's
   const getData = async () => {
     const data = await getDocs(collection(firebase.db, firebase.user.uid));
     setTodos(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    const userData = await getDocs(collection(firebase.db, "Profile_Section"));
+    console.log("Logged user Dataa", userData);
   };
   // Logout Function
   const logout = async () => {
@@ -84,7 +80,7 @@ function Main() {
         {firebase.isLoggedIn ? (
           <>
             <Nav.Item>
-              <Nav.Link>{userEmail}</Nav.Link>
+              <Nav.Link>{userData.name}</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link onClick={logout}>Logout</Nav.Link>

@@ -9,24 +9,29 @@ const Register = () => {
   const firebase = useFirebase();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [city, setCity] = useState("");
+  const [age, setAge] = useState("");
+  const [name, setName] = useState("Ked");
   const [password, setPassword] = useState("");
   useEffect(() => {
     if (firebase.isLoggedIn) {
       // navigate to home
       navigate("/");
     }
-    firebase.setMsg("Please Register here!");
-  }, [firebase, navigate]);
-
+  }, [firebase,firebase.user, navigate]);
+  const showMessage = () => {
+    document.getElementById("messageRegister").innerHTML = firebase.msg;
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await firebase.register(email, password);
-    // navigate("/register")
+    await firebase.register(email, password,name,age,city);
+    
+    showMessage();
   };
 
   return (
     <div className="container mt-5">
-      <Alert variant={"dark"}>{firebase.msg}</Alert>
+      <Alert variant={"dark"} id="messageRegister"></Alert>
       <Link to="/">
         <button
           className="btn "
