@@ -1,32 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { Alert, Container } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 import { Form, Card, Nav } from "react-bootstrap";
 import { useFirebase } from "../firebase";
-import {
-  getDocs,
-  addDoc,
-  collection,
-  where,
-  doc,
-  documentId,
-} from "firebase/firestore";
+import { getDocs, addDoc, collection } from "firebase/firestore";
 import axios from "axios";
 function Main() {
   const [text, setText] = useState("");
   const [todos, setTodos] = useState([]);
   const firebase = useFirebase();
-  const [userData, setUserData] = useState({});
 
   useEffect(() => {
     const showUser = async () => {
       if (firebase.isLoggedIn) {
+        console.log("Isloggedininmain", firebase.isLoggedIn);
         getData();
-        console.log(firebase.user);
       }
-      firebase.setMsg("Please Login to use the Application");
+      // firebase.setMsg("Please Login to use the Application");
     };
     showUser();
-  }, [firebase]);
+  }, [firebase, firebase.isLoggedIn]);
   // Fetch Functions API's
   const getFunctionAPI = async () => {
     const res =
@@ -39,10 +31,9 @@ function Main() {
   };
   // Get all TODO's
   const getData = async () => {
+    console.log("From get Data", firebase.db, firebase.user.uid);
     const data = await getDocs(collection(firebase.db, firebase.user.uid));
     setTodos(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    const userData = await getDocs(collection(firebase.db, "Profile_Section"));
-    console.log("Logged user Dataa", userData);
   };
   // Logout Function
   const logout = async () => {
@@ -80,13 +71,16 @@ function Main() {
         {firebase.isLoggedIn ? (
           <>
             <Nav.Item>
-              <Nav.Link>{userData.name}</Nav.Link>
+              <Nav.Link>{firebase.user.email}</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link onClick={logout}>Logout</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link onClick={getFunctionAPI}>API</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/profile">Profile</Nav.Link>
             </Nav.Item>
           </>
         ) : (
@@ -141,29 +135,11 @@ function Main() {
                 Add Todo
               </button>
             </div>
-
-            <hr style={{ margin: 50 }}></hr>
-
-            <p className="display-5 " style={{ margin: 40 }}>
-              Your todo's
-            </p>
           </>
         ) : (
-          <Alert variant={"dark"}>{firebase.msg}</Alert>
+          firebase.error && <Alert variant={"dark"}>{firebase.error}</Alert>
         )}
       </Form>
-
-      {todos.map((todo) => {
-        return (
-          <Card key={todo.id} style={{ margin: 30 }}>
-            <Card.Header>Task</Card.Header>
-            <Card.Body>
-              <Card.Title>{todo.Name}</Card.Title>
-              <Card.Text>{todo.text}</Card.Text>
-            </Card.Body>
-          </Card>
-        );
-      })}
     </div>
   );
 }

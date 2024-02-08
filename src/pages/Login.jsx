@@ -15,13 +15,10 @@ const Login = () => {
       navigate("/");
     }
   }, [firebase, navigate]);
-  const showMessage = () => {
-    document.getElementById("message").innerHTML = firebase.msg;
-  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     await firebase.login(email, password);
-    showMessage();
   };
   const signInWithGoogle = async (e) => {
     e.preventDefault();
@@ -42,7 +39,11 @@ const Login = () => {
           <button className="btn btn-outline-dark"> Go back</button>
         </Link>
         <p className="h1 mb-5 mt-2">Login Page</p>
-        <Alert variant={"dark"} id="message"></Alert>
+        {firebase.error && (
+          <Alert variant={"dark"} id="message">
+            {firebase.error}
+          </Alert>
+        )}  
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>

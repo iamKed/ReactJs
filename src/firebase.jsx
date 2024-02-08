@@ -1,10 +1,16 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  getFirestore,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 import firebaseConfig from "./firebase-config";
-
 import { connectFirestoreEmulator } from "firebase/firestore";
-import { connectAuthEmulator } from "firebase/auth";
+import { connectAuthEmulator, updateProfile } from "firebase/auth";
+
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -16,28 +22,33 @@ import {
   signOut,
 } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
+import { setUserRedux, seterror } from "./features/user/userSlice";
+import { useSelector, useDispatch } from "react-redux";
 // Your web app's Firebase configuration
 const FirebaseContext = createContext(null);
 export const useFirebase = () => useContext(FirebaseContext);
 const app = initializeApp(firebaseConfig);
 const firebaseAuth = getAuth(app);
 const db = getFirestore(app);
-connectAuthEmulator(firebaseAuth,"http://localhost:9099", 9099);
+connectAuthEmulator(firebaseAuth, "http://localhost:9099", 9099);
 connectFirestoreEmulator(db, "localhost", 8080);
 const googleProvider = new GoogleAuthProvider();
 export const FirebaseProvider = (props) => {
-  const [msg, setMsg] = useState("");
+  const dispatch = useDispatch();
+  const error = useSelector((state) => state.userDetails.error);
   const [user, setUser] = useState(null);
+
+  const profile = useSelector((state) => state.userDetails.user);
   useEffect(() => {
     try {
       onAuthStateChanged(firebaseAuth, (user) => {
         if (user) {
           setUser(user);
+          console.log("User from redux", user.uid);
         } else {
           setUser(null);
         }
       });
-      // console.log("in useeffect",msg)
     } catch (e) {
       console.log(e);
     }
@@ -45,65 +56,53 @@ export const FirebaseProvider = (props) => {
 
   // API fetch for logged in Person
 
-  const register = async (email, password,name,age,city) => {
+  const register = async (email, password, name, age, city) => {
     try {
       await createUserWithEmailAndPassword(firebaseAuth, email, password).then(
         (userCredentials) => {
-          // userCredentials.user.sendEmailVerification();
-           sendEmailVerification(userCredentials.user);
-          
-          console.log("Document added",email,age,city,name)
+          updateProfile(userCredentials.user, {
+            displayName: name,
+          });
+          dispatch(setUserRedux(userCredentials.user));
+          sendEmailVerification(userCredentials.user);
           logout();
           alert("Please Verify your Email to Login on the Link sent!");
         }
       );
     } catch (error) {
-      switch (error.code) {
-        case "auth/email-already-in-use":
-          setMsg("Email already exists. Try Logging in");
-          break;
-        case "auth/weak-password":
-          setMsg("Weak Password ");
-          break;
-        default:
-          setMsg(error.code);
-          break;
-      }
+      dispatch(seterror(error.message));
+      console.log(error);
     }
   };
 
   const login = async (email, password) => {
     try {
-      console.log("Logging in");
       await signInWithEmailAndPassword(firebaseAuth, email, password);
+      
     } catch (error) {
-      switch (error.code) {
-        case "auth/invalid-credential":
-          setMsg("Please check your Email and Password");
-          break;
-        default:
-          setMsg("Please Register yourself");
-          console.log("Hii");
-          break;
-      }
+      dispatch(seterror(error.message));
     }
-    console.log("Succesfully Logged in");
   };
 
   const loginWithGoogle = async () => {
     try {
       console.log("Logging in with Google");
       await signInWithPopup(firebaseAuth, googleProvider);
-      console.log("Succesfully Logged in",user);
-    } catch (e) {
-      console.log(e);
+      console.log("Succesfully Logged in", user);
+    } catch (error) {
+      dispatch(seterror(error.message));
     }
   };
   const isLoggedIn = user ? true : false;
   // Logout function
   const logout = async () => {
-    await signOut(firebaseAuth);
+    try {
+      await signOut(firebaseAuth);
+    } catch (e) {
+      console.log("Error in logout", e);
+    }
   };
+  // console.log();
 
   return (
     <FirebaseContext.Provider
@@ -113,9 +112,11 @@ export const FirebaseProvider = (props) => {
         loginWithGoogle,
         isLoggedIn,
         user,
-        msg,
-        setMsg,
+        error,
+        seterror,
+        user,
         logout,
+        firebaseAuth,
         db,
       }}
     >

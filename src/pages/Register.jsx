@@ -11,27 +11,23 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
   const [age, setAge] = useState("");
-  const [name, setName] = useState("Ked");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   useEffect(() => {
     if (firebase.isLoggedIn) {
+      console.log("Inside register useeffect", firebase);
       // navigate to home
       navigate("/");
     }
-  }, [firebase,firebase.user, navigate]);
-  const showMessage = () => {
-    document.getElementById("messageRegister").innerHTML = firebase.msg;
-  };
+  }, [firebase.isLoggedIn, firebase.user, navigate]);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await firebase.register(email, password,name,age,city);
-    
-    showMessage();
+    await firebase.register(email, password, name, age, city);
   };
 
   return (
     <div className="container mt-5">
-      <Alert variant={"dark"} id="messageRegister"></Alert>
+      {firebase.error && <Alert variant={"dark"} id="messageRegister">{firebase.error}</Alert>}
       <Link to="/">
         <button
           className="btn "
@@ -42,6 +38,49 @@ const Register = () => {
       </Link>
       <p className="h1 ">Registration Page</p>
       <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>User Name</Form.Label>
+          <Form.Control
+            type="name"
+            value={name}
+            placeholder="Enter Name "
+            style={{
+              background: "transparent",
+              borderColor: "black",
+              borderRadius: 20,
+            }}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicCity">
+          <Form.Label>City</Form.Label>
+          <Form.Control
+            type="text"
+            value={city}
+            placeholder="Enter city"
+            style={{
+              background: "transparent",
+              borderColor: "black",
+              borderRadius: 20,
+            }}
+            onChange={(e) => setCity(e.target.value)}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicAge">
+          <Form.Label>Age</Form.Label>
+          <Form.Control
+            type="number"
+            value={age}
+            placeholder="Enter age"
+            style={{
+              background: "transparent",
+              borderColor: "black",
+              borderRadius: 20,
+            }}
+            onChange={(e) => setAge(e.target.value)}
+          />
+        </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
