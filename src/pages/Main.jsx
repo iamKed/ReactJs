@@ -4,18 +4,20 @@ import { Form, Card, Nav } from "react-bootstrap";
 import { useFirebase } from "../firebase";
 import { getDocs, addDoc, collection } from "firebase/firestore";
 import axios from "axios";
+import Navbar from "../components/Navbar";
+import Todo, { getData } from "../components/Todo";
+import Datetime from "react-datetime";
 function Main() {
   const [text, setText] = useState("");
   const [todos, setTodos] = useState([]);
   const firebase = useFirebase();
-
+  const [date,setDate]=useState("");
+  const [time,setTime]=useState("");
   useEffect(() => {
     const showUser = async () => {
       if (firebase.isLoggedIn) {
-        console.log("Isloggedininmain", firebase.isLoggedIn);
         getData();
       }
-      // firebase.setMsg("Please Login to use the Application");
     };
     showUser();
   }, [firebase, firebase.isLoggedIn]);
@@ -31,7 +33,6 @@ function Main() {
   };
   // Get all TODO's
   const getData = async () => {
-    console.log("From get Data", firebase.db, firebase.user.uid);
     const data = await getDocs(collection(firebase.db, firebase.user.uid));
     setTodos(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
@@ -46,10 +47,10 @@ function Main() {
       e.preventDefault();
       let data = {
         text: text,
-        createdAt: firebase.user.metadata.creationTime,
+        date:date,
+        time:time
       };
       await addDoc(collection(firebase.db, firebase.user.uid), data);
-      console.log("Done");
       getData();
     } catch (e) {
       console.log(e);
@@ -58,7 +59,7 @@ function Main() {
   // React UI Component Return
   return (
     <div>
-      <Nav activeKey="/home" style={{ backgroundColor: "#5EBEC4" }}>
+      {/* <Nav activeKey="/home" style={{ backgroundColor: "#5EBEC4" }}>
         <Nav.Item>
           <Nav.Link href="/">
             <span className="display-6" style={{ backgroungColor: "#F92C85" }}>
@@ -93,7 +94,8 @@ function Main() {
             </Nav.Item>
           </>
         )}
-      </Nav>
+      </Nav> */}
+      <Navbar />
       <Form>
         {firebase.isLoggedIn ? (
           <>
@@ -124,9 +126,43 @@ function Main() {
                   }}
                 />
               </Form.Group>
+              <div style={{ display: "flex", marginTop: 30 }}>
+                <Form.Group controlId="form.Name">
+                  <Form.Label>Add Date</Form.Label>
+                  <Form.Control
+                    type="date"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                    placeholder="Add a todo"
+                    style={{
+                      background: "transparent",
+                      borderColor: "black",
+                      borderRadius: 20,
+                      width: 400,
+                      marginRight: 100,
+                    }}
+                  />
+                </Form.Group>
+                <Form.Group controlId="form.Name">
+                  <Form.Label>Add time</Form.Label>
+                  <Form.Control
+                    type="time"
+                    value={time}
+                    onChange={(e) => setTime(e.target.value)}
+                    placeholder="Add a todo"
+                    style={{
+                      background: "transparent",
+                      borderColor: "black",
+                      borderRadius: 20,
+                      width: 400,
+                    }}
+                  />
+                </Form.Group>
+              </div>
               <button
                 style={{
-                  marginTop: 20,
+                  marginTop: 40,
+                  marginLeft: 650,
                 }}
                 type="button"
                 className="btn btn-outline-success"
@@ -137,9 +173,21 @@ function Main() {
             </div>
           </>
         ) : (
-          firebase.error && <Alert variant={"dark"}>{firebase.error}</Alert>
+          firebase.error && (
+            <Alert variant={"danger"} style={{ marginTop: 20, margin: 10 }}>
+              {firebase.error}
+            </Alert>
+          )
         )}
       </Form>
+      {todos &&
+        todos.map((todo) => {
+          return (
+            <div>
+              <Todo text={todo.text} date={todo.date} time={todo.time} />
+            </div>
+          );
+        })}
     </div>
   );
 }

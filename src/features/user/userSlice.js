@@ -5,15 +5,18 @@ export const userSlice = createSlice({
   initialState: {
     loading: false,
     user: {},
+    userTodos: [],
     error: "Please Login to use the Application",
   },
   reducers: {
     setUserRedux: (state, action) => {
-      state.user =  action.payload;
-      console.log("This is the setUser method in redux reducers after dispatcher is used",state.user)
+      state.user = action.payload;
     },
     seterror: (state, action) => {
       state.error = action.payload;
+    },
+    setTodos: (state, action) => {
+      state.todos.push(action.payload);
     },
   },
 });

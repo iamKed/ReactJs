@@ -44,7 +44,6 @@ export const FirebaseProvider = (props) => {
       onAuthStateChanged(firebaseAuth, (user) => {
         if (user) {
           setUser(user);
-          console.log("User from redux", user.uid);
         } else {
           setUser(null);
         }
@@ -78,7 +77,6 @@ export const FirebaseProvider = (props) => {
   const login = async (email, password) => {
     try {
       await signInWithEmailAndPassword(firebaseAuth, email, password);
-      
     } catch (error) {
       dispatch(seterror(error.message));
     }
@@ -102,7 +100,6 @@ export const FirebaseProvider = (props) => {
       console.log("Error in logout", e);
     }
   };
-  // console.log();
 
   return (
     <FirebaseContext.Provider
